@@ -9,8 +9,45 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
+        
+        VStack{
+            
+            Image(systemName: "house")
+                .imageScale(.large)
+                .foregroundColor(.purple)
+            
+            HStack{
+                
+                Text("Home")
+                    .font(.title2)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.purple)
+                    .padding(.leading, 3.0)
+                
+                Text("Courses")
+                    .font(.title2)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.purple)
+                    .multilineTextAlignment(.center)
+                    .padding(.leading, 3.0)
+                    
+                
+                Text("About us")
+                    .font(.title2)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.purple)
+                    .multilineTextAlignment(.center)
+                    .padding(.leading, 3.0)
+                
+            }
+            Image("classrooms")
+                .resizable()
+                .scaledToFit()
+            
+            
+            .padding()
+            
+            Image(systemName: "book")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
             
