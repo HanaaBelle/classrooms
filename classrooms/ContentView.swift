@@ -11,6 +11,13 @@ struct ContentView: View {
     var body: some View {
         
         VStack{
+             
+            Image(systemName: "moon")
+                .imageScale(.large)
+                .foregroundColor(.purple)
+            Text("Dark Mode")
+                .fontWeight(.bold)
+                .padding(.bottom)
             
             Image(systemName: "house")
                 .imageScale(.large)
