@@ -11,7 +11,7 @@ struct ContentView: View {
     var body: some View {
         
         VStack{
-             
+            // Dark Mode
             Image(systemName: "moon")
                 .imageScale(.large)
                 .foregroundColor(.purple)
@@ -19,40 +19,13 @@ struct ContentView: View {
                 .fontWeight(.bold)
                 .padding(.bottom)
             
-            Image(systemName: "house")
-                .imageScale(.large)
-                .foregroundColor(.purple)
             
-            HStack{
-                
-                Text("Home")
-                    .font(.title2)
-                    .fontWeight(.bold)
-                    .foregroundColor(Color.purple)
-                    .padding(.leading, 3.0)
-                
-                Text("Courses")
-                    .font(.title2)
-                    .fontWeight(.bold)
-                    .foregroundColor(Color.purple)
-                    .multilineTextAlignment(.center)
-                    .padding(.leading, 3.0)
-                    
-                
-                Text("About us")
-                    .font(.title2)
-                    .fontWeight(.bold)
-                    .foregroundColor(Color.purple)
-                    .multilineTextAlignment(.center)
-                    .padding(.leading, 3.0)
-                
-            }
             Spacer()
             
+            // Welcome Text
             Image(systemName: "book")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
-            
             Text("Welcome To Our Classrooms !")
                 .font(.title2)
                 .fontWeight(.bold)
