@@ -47,12 +47,7 @@ struct ContentView: View {
                     .padding(.leading, 3.0)
                 
             }
-            Image("classrooms")
-                .resizable()
-                .scaledToFit()
-            
-            
-            .padding()
+            Spacer()
             
             Image(systemName: "book")
                 .imageScale(.large)
