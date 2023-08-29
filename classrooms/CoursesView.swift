@@ -6,10 +6,14 @@
 //
 
 import SwiftUI
-
-struct ContentView: View {
+// Pour créer une liste on renomme le ContentView avec le refactoring
+// On a bien un CoursesView qui prend un cours en paramètre
+struct CoursesView: View {
     // Déclarer une var qui est un état "a state"
     @State private var cliqued = false
+    
+    // On prend en paramètre un cours
+    var course:Course
     var body: some View {
         
         VStack{
@@ -20,7 +24,6 @@ struct ContentView: View {
             Text("Dark Mode")
                 .fontWeight(.bold)
                 .padding(.bottom)
-            
             
             Spacer()
             
@@ -35,6 +38,7 @@ struct ContentView: View {
                 .multilineTextAlignment(.center)
                 .padding()
                 .frame(width: 200.0)
+            
             
             // Click Here Button
             Button(cliqued ? "Return" : "Click Here") {
@@ -61,12 +65,14 @@ struct ContentView: View {
                     .fontWeight(.bold)
                     .foregroundColor(Color.purple)
                     .padding(.leading, 3.0)
-                Text("Courses")
+                
+                Text(course.name)
                     .font(.title2)
                     .fontWeight(.bold)
                     .foregroundColor(Color.purple)
                     .multilineTextAlignment(.center)
                     .padding(.leading, 3.0)
+                
                 Text("About us")
                     .font(.title2)
                     .fontWeight(.bold)
@@ -74,14 +80,13 @@ struct ContentView: View {
                     .multilineTextAlignment(.center)
                     .padding(.leading, 3.0)
             }
-            
         }
-        
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        // On met en paramètre cours pour atteindre le 1er cours de la liste
+        CoursesView(course: Course.list[0])
     }
 }
