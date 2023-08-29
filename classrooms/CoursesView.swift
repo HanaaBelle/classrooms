@@ -83,8 +83,9 @@ struct CoursesView: View {
         }
     }
 }
-
-struct ContentView_Previews: PreviewProvider {
+// Cette partie est importante pour l'affichage de l'émulateur
+// Pour créer une liste on renomme le Preview avec le refactoring
+struct Courses_Previews: PreviewProvider {
     static var previews: some View {
         // On met en paramètre cours pour atteindre le 1er cours de la liste
         CoursesView(course: Course.list[0])
