@@ -14,18 +14,20 @@ struct Course : Identifiable {
     let description: String
     let image: String
 }
+
 // Une extension permet d'étendre une classe sur une liste de cours 
 extension Course {
     static let list: [Course] = [
-        Course(name: "Algorithmie", description: "Initiation à l'algorithmie", image: "algo"),
-        Course(name: "Initiation à l'informatique : Les bases", description: "Cours d'initiation sur le monde de l'informatique: Les bases", image: "imageParDefaut"),
+        Course(name: "Algorithmie", description: "Initiation à l'algorithmie", image: "organigramme"),
         
-        Course(name: "Initiation à l'informatique : Cours avancé", description: "Cours d'initiation sur le monde de l'informatique: Cours avancé", image: "imageParDefaut"),
+        Course(name: "Les_bases", description: "Cours d'initiation sur le monde de l'informatique: Les bases", image: "basicsInfo"),
         
-        Course(name: "Apprendre la bureautique : Microsoft Excel", description: "Cours sur la bureautique: Microsoft Word", image: "microsoftWord"),
+        Course(name: "Cours_avances", description: "Cours d'initiation sur le monde de l'informatique: Cours avancé", image: "averageInfo"),
         
-        Course(name: "Apprendre la bureautique : Microsoft Word", description: "Cours sur la bureautique: Microsoft Excel", image: "microsoftExcel"),
+        Course(name: "Microsoft_word", description: "Cours sur la bureautique: Microsoft Word", image: "word"),
         
-        Course(name: "Apprendre la bureautique : Microsoft PowerPoint", description: "Cours sur la bureautique: Microsoft PowerPoint", image: "microsoftPowerPoint"),
+        Course(name: "Microsoft_excel", description: "Cours sur la bureautique: Microsoft Excel", image: "excel"),
+        
+        Course(name: "Microsoft_powerPoint", description: "Cours sur la bureautique: Microsoft PowerPoint", image: "powerPoint"),
     ]
 }
