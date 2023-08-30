@@ -25,6 +25,17 @@ struct HomeView: View {
                 // Construire chaque élément
                 // Il Convertit un élément de liste course en CourseItemView
                 course in CourseItemView(course: course)
+                // Là je met le link
+                    .overlay(NavigationLink(
+                        destination: CoursesView(
+                            course: course),
+                        label: {//Text("📖")
+                            EmptyView()
+                        }
+                    )// Pour enlever le chevron
+                        //.opacity(0)
+                    )// Pour enlever le séparateur entre les Items des cours
+                    .listRowSeparator(.hidden)
             }
             // Définir le titre de navigation
             .listStyle(PlainListStyle())
