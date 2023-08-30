@@ -11,17 +11,24 @@ import SwiftUI
 // On construit la liste dans le HomeView
 struct HomeView: View {
     var body: some View {
-        //CourseItemView(course:Course.list[0])
-        
-        // Afficher la liste on utilise la vue List récupérer l'identifiant de chaque Item
-        // Pour déclarer une liste je met List
-        // Je mets ma liste statique que j'ai déclaré juste avant
-        // Je met un identifiant unique ici (je prends d'id pcq il est unique)
-        // Puis je map grâce à une variable ici c'est course qui sera traduit en CourseItemView
-        List(Course.list, id: \.id) {
-            // Construire chaque élément
-            // Il Convertit un élément de liste course en CourseItemView
-            course in CourseItemView(course: course)
+        // Ajout de la navigation
+        NavigationView {
+            
+            //CourseItemView(course:Course.list[0])
+            
+            // Afficher la liste on utilise la vue List récupérer l'identifiant de chaque Item
+            // Pour déclarer une liste je met List
+            // Je mets ma liste statique que j'ai déclaré juste avant
+            // Je met un identifiant unique ici (je prends d'id pcq il est unique)
+            // Puis je map grâce à une variable ici c'est course qui sera traduit en CourseItemView
+            List(Course.list, id: \.id) {
+                // Construire chaque élément
+                // Il Convertit un élément de liste course en CourseItemView
+                course in CourseItemView(course: course)
+            }
+            // Définir le titre de navigation
+            .listStyle(PlainListStyle())
+            .navigationTitle("Courses")
         }
     }
 }
